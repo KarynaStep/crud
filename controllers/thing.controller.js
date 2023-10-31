@@ -74,7 +74,7 @@ module.exports.deleteThing = async (req, res, next) => {
       return res.status(404).send({ data: "Bad Request" });
     }
 
-    res.status(202).send({ data: "Thing delete" });
+    res.status(200).send({ data: thing });
   } catch (error) {
     console.log(error);
     next(error);
